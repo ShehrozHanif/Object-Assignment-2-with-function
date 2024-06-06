@@ -28,34 +28,29 @@ let car1 = {
     }
 };
 console.log(car1.getHorsePower());
-const myTShirt = {
-    name: 'Cool T-Shirt',
+let shirt = {
+    name: "polo",
     price: 2000,
-    color: 'white',
+    color: "white",
     inventory: {
         stock: 100,
-        colorOptions: ['red', 'blue', 'green'],
+        colorOption: ["red", "blue", "black"],
         changeColor: function (newColor) {
-            myTShirt.color = newColor;
+            shirt.color = newColor;
             // Adjust the price based on the new color
             switch (newColor.toLowerCase()) {
                 case 'red':
-                    myTShirt.price *= 1.10; // Increase by 10% for red
+                    shirt.price *= 1.10; // Increase by 10% for red
                     break;
                 case 'blue':
-                    myTShirt.price *= 0.95; // Decrease by 5% for blue
+                    shirt.price *= 0.95; // Decrease by 5% for blue
                     break;
                 default:
-                    // Implement other color-based price adjustments if needed
                     break;
             }
         }
     }
 };
-// Example usage:
-console.log(myTShirt); // Initial state
-// myTShirt.inventory.changeColor('red');
-// console.log(myTShirt); // After changing to red
-myTShirt.inventory.changeColor('blue');
-console.log(myTShirt); // After changing to blue
+shirt.inventory.changeColor("BLUE"); //For more checing you can change the color to red or add any other color through chagneColor function
+console.log(shirt);
 export {};

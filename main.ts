@@ -47,7 +47,7 @@ type car ={
     engine:{
         horsePower:number
     }
-    getHorsePower:()=>any;
+    getHorsePower:()=>string|number;
 }
 
 let car1:car={
